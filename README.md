@@ -80,7 +80,7 @@ Basic Security Configuration
 
 Allow SSH and (if required) HTTP. Launching Vagrant-created resources into their own security group give you an additional level of control.
 
-![Screenshot](https://github.com/kploesser/aws-cross-region-rds/raw/master/images/image+01+01.png)
+![Screenshot](https://github.com/kploesser/vagrant-on-aws/raw/master/images/image+01+01.png)
 
 ### Creating a Vagrant user
 
@@ -90,7 +90,7 @@ Never use your AWS root credentials.
 
 In particular, protect any AWS access keys and keypairs you may generate from accidental sharing via version control.
 
-![Screenshot](https://github.com/kploesser/aws-cross-region-rds/raw/master/images/image+01+02.png)
+![Screenshot](https://github.com/kploesser/vagrant-on-aws/raw/master/images/image+01+02.png)
 
 ### Keeping your AWS access keys and keypairs safe
 
@@ -141,15 +141,15 @@ $ vagrant up
 
 If you have not downloaded a version of the CentOS box before, Vagrant will now attempt to do so.
 
-![Screenshot](https://github.com/kploesser/aws-cross-region-rds/raw/master/images/image+02+01.png)
+![Screenshot](https://github.com/kploesser/vagrant-on-aws/raw/master/images/image+02+01.png)
 
 If all goes well, the shell provisioner script will install and start Apache.
 
-![Screenshot](https://github.com/kploesser/aws-cross-region-rds/raw/master/images/image+02+02.png)
+![Screenshot](https://github.com/kploesser/vagrant-on-aws/raw/master/images/image+02+02.png)
 
 You can now test your installation by bringing up `http://localhost:4000` in your web browser.
 
-![Screenshot](https://github.com/kploesser/aws-cross-region-rds/raw/master/images/image+02+03.png)
+![Screenshot](https://github.com/kploesser/vagrant-on-aws/raw/master/images/image+02+03.png)
 
 After testing your environment, make sure to destroy the Vagrant machine to release compute and storage resources.
 
@@ -189,7 +189,7 @@ See the `Vagrantfile.aws` file for details.
 
 Note that AMI identifiers change between region. Here is how you look up yours.
 
-![Screenshot](https://github.com/kploesser/aws-cross-region-rds/raw/master/images/image+03+01.png)
+![Screenshot](https://github.com/kploesser/vagrant-on-aws/raw/master/images/image+03+01.png)
 
 Your `Vagrantfile` should now have the following entries.
 
@@ -240,13 +240,13 @@ $ vagrant up
 
 Vagrant will now attempt to spin up a new EC2 instance according to the parameters you provided.
 
-![Screenshot](https://github.com/kploesser/aws-cross-region-rds/raw/master/images/image+04+01.png)
+![Screenshot](https://github.com/kploesser/vagrant-on-aws/raw/master/images/image+04+01.png)
 
 Note that any network settings in the `Vagrantfile` are silently ignored.
 
 When the EC2 instance is ready, Vagrant will attempt to provision the machine.
 
-![Screenshot](https://github.com/kploesser/aws-cross-region-rds/raw/master/images/image+04+02.png)
+![Screenshot](https://github.com/kploesser/vagrant-on-aws/raw/master/images/image+04+02.png)
 
 You can log into the EC2 instance as normal via the vagrant ssh command.
 
@@ -256,17 +256,17 @@ $ vagrant ssh
 
 This will bring you to the Amazon Linux prompt on your newly provisioned EC2 instance.
 
-![Screenshot](https://github.com/kploesser/aws-cross-region-rds/raw/master/images/image+04+03.png)
+![Screenshot](https://github.com/kploesser/vagrant-on-aws/raw/master/images/image+04+03.png)
 
 Test your provisioned EC2 instance by bringing up the test web site.
 
 First, identify the public EC2 instance IP by logging into the AWS console.
 
-![Screenshot](https://github.com/kploesser/aws-cross-region-rds/raw/master/images/image+04+04.png)
+![Screenshot](https://github.com/kploesser/vagrant-on-aws/raw/master/images/image+04+04.png)
 
 You can now test your Apache web server in the cloud by typing in the public IP.
 
-![Screenshot](https://github.com/kploesser/aws-cross-region-rds/raw/master/images/image+04+05.png)
+![Screenshot](https://github.com/kploesser/vagrant-on-aws/raw/master/images/image+04+05.png)
 
 Do not forget to destroy the EC2 resources you created to avoid incurring unnecessary charges.
 
@@ -276,7 +276,7 @@ $ vagrant destroy --force
 
 You can follow the progress of shutting down EC2 resources in the AWS console.
 
-![Screenshot](https://github.com/kploesser/aws-cross-region-rds/raw/master/images/image+04+06.png)
+![Screenshot](https://github.com/kploesser/vagrant-on-aws/raw/master/images/image+04+06.png)
 
 Additional Topics
 -----------------
