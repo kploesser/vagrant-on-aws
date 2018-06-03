@@ -14,7 +14,7 @@ Vagrant.configure('2') do |config|
 
   # Use dummy AWS box
   config.vm.box = 'dummy'
-  config.vm.provision :shell, path: "bootstrap.sh"
+  config.vm.provision :shell, path: "scripts/bootstrap.sh"
   config.vm.synced_folder ".", "/vagrant", type: "rsync"
 
   # Specify AWS provider configuration

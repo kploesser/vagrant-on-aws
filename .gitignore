@@ -1,0 +1,15 @@
+# Vagrant local folder
+.vagrant/
+
+# Log files
+*.log
+
+# Vagrant base boxes
+*.box
+
+# Web application archives
+*.war
+
+# OS or Editor files
+.DS_Store
+*.plist
